@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>learnjsdata</title>
+
+    <script src='lib/d3.min.js'></script>
+    <script src='lib/lodash.min.js'></script>
+
+    </head>
+    <body>
+       <div id="viz"></div>
+       <!-- python -m http.server -->
+        <script>
+        theMax = d3.max([1000,2,2000,3])
+
+        // data = d3.csv("https://cdn.rawgit.com/vlandham/js_data/master/data/cities.csv")
+
+        console.log(theMax)
+
+        d3.csv("/data/cities.csv", function(data) {
+            console.log(data);
+        });
+
+           </script>
+    </body>
+</html>
