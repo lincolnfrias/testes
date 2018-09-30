@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <title></title>
+    </head>
+    <body>
+
+        <p>Alguma coisa.</p>
+        <ul id='lista'></ul>
+        <script>
+
+        var formatacao = function(row) {
+                                return {name: row.name, 
+                                        age: +row.age, 
+                                        color: row.color};
+        }    
+
+        var callback = function(data) {
+                    
+                    var averageAge = data.reduce(function(prev, curr) {
+                        return prev + curr.age;
+                    }, 0) / data.length;
+
+                    var ulSelection = d3.select('#lista');
+                    var valuesSelection = ulSelection.selectAll('li').data(data).enter().append('li').text(function(d) { return d.name; });
+                    var totalSelection = ulSelection.append('li').text('Average: ' + averageAge);
+        };
+
+        d3.csv('/data/lendocsv.csv', formatacao).then(callback);
+
+        // v4 
+        // d3.csv('/data/lendocsv.csv', formatacao, callback);    
+        </script>
+    </body>
+</html>
