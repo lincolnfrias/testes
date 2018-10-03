@@ -42,8 +42,8 @@
         // $('#p2').text(data.columns);
             
 
-        var vlSpec = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+        let vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v3.0.0-rc6.json",
             "width": 400, 
             "data": {"url": "data/juros.csv"},
             "mark": "line",
@@ -64,23 +64,18 @@
         };
         
         
-        vegaEmbed("#chart", vlSpec, { actions: false,  defaultStyle: true });
+        vegaEmbed("#chart", vlSpec, {actions: false});
 
-          $(function () {
+        vegaEmbed("#chart", vlSpec);
 
-                vegaEmbed("#chart", vlSpec);
+        $('#input1').on('click', function () {
 
-                $('#input1').on('click', function () {
-                    let escolha = $('#input1').val()
+            let escolha = $('#input1').val()
+            $('#p3').text(escolha);
+            vlSpec.encoding.y.field = escolha.toString()
+            vegaEmbed("#chart", vlSpec, {actions: false});
 
-                    $('#p3').text(escolha);
-                    vlSpec.encoding.y.field = escolha.toString()
-
-                    vegaEmbed("#chart", vlSpec, { actions: false, defaultStyle: true } );
-
-                });
-
-            });
+        });
 
         </script>
 
