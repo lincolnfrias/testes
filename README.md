@@ -2,7 +2,7 @@
 
 <br>
 
-O objetivo aqui é mostrar como construir páginas interativas, como [esta](???), em que os usuários podem controlar gráficos e cálculos.   
+O objetivo aqui é mostrar como construir páginas interativas, como [esta](app1.html), em que os usuários podem controlar gráficos e cálculos.   
 
 Vamos chamá-las de *apps*, aplicativos web, porque elas são mais dinâmicas do que as páginas comuns, estáticas.   
 
