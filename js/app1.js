@@ -5,7 +5,7 @@ $('#sel1', '#sel2').selectmenu();
 let vlSpec = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v3.0.0-rc5.json',
     'width': 400,
-    'data': { 'url': '../data/juros.csv' },
+    'data': { 'url': 'data/juros.csv' },
     'mark': 'line',
     'encoding': {
         'x': { 'field': 'x', 'type': 'quantitative' },
