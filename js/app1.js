@@ -5,7 +5,7 @@ $('#sel1', '#sel2').selectmenu();
 let vlSpec = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v3.0.0-rc5.json',
     'width': 400,
-    'data': { 'url': 'data/juros.csv' },
+    'data': { 'url': '../data/juros.csv' },
     'mark': 'line',
     'encoding': {
         'x': { 'field': 'x', 'type': 'quantitative' },
@@ -39,13 +39,13 @@ $('#sel1').selectmenu({
 
 
 
-var dados = [
+let dados = [
     { 'a': 'C', 'b': 2, 'c': 22 }, { 'a': 'C', 'b': 7, 'c': 24 }, { 'a': 'C', 'b': 4, 'c': 27 },
     { 'a': 'D', 'b': 1, 'c': 27 }, { 'a': 'D', 'b': 2, 'c': 28 }, { 'a': 'D', 'b': 6, 'c': 25 },
     { 'a': 'E', 'b': 8, 'c': 23 }, { 'a': 'E', 'b': 4, 'c': 29 }, { 'a': 'E', 'b': 7, 'c': 23 }
 ]
 
-var vlSpec2 = {
+let vlSpec2 = {
     '$schema': 'https://vega.github.io/schema/vega-lite/v3.0.0-rc5.json',
     'data': {
         'values': dados,
@@ -63,13 +63,13 @@ var vlSpec2 = {
 };
 
 
-vegaEmbed('#chart2', vlSpec2, { actions: false });
+vegaEmbed('#chart2', vlSpec2, {actions: false});
 
 $('#sel2').selectmenu({
     change: function () {
     let escolha = $('#sel2').val()
     vlSpec2.encoding.x.field = escolha.toString()
-    vegaEmbed('#chart2', vlSpec2, { actions: false });
+    vegaEmbed('#chart2', vlSpec2, {actions: false});
 }});
 
 
