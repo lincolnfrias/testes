@@ -44,3 +44,7 @@ input:focus {
 .correta {
     color: blue;
 }
+
+#range2 {
+    width: 400px;
+}

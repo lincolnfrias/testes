@@ -1,12 +1,24 @@
+$('#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9').button();
+$('#sel1, #sel2, #sel3').selectmenu();
+$("#numero1").spinner();
+$("#range2").slider({
+    value: 50, 
+    slide: function(event, ui) {
+        $('#sp13').html($('#range2').slider('values', 0));        
+    }
+});
+
 $('#btn1').on('click', function(){
     $('#p1').html('Aqui está um texto diferente.');
     });
 
-$('#sel1').on('change', function() {
-    let value = $(this).val()
-    value = Number(value) + 800 // parseInt()
-    let opcao = $('#sel1 option:selected').text()
-    $('#p2').html(`A opção selecionada foi ${opcao}, por isso, o valor é ${value}.`);
+$('#sel1').selectmenu({
+    change: function() {
+                let value = $(this).val()
+                value = Number(value) + 800 // parseInt()
+                let opcao = $('#sel1 option:selected').text()
+                $('#p2').html(`A opção selecionada foi ${opcao}, por isso, o valor é ${value}.`);
+            }
 });
 
 let x = 5;
@@ -53,11 +65,20 @@ $('#caixa1').on('submit', function (event) {
     event.preventDefault();
 });
 
-$('#sel2').on('change', function () {
-    var color = $(this).val();
-    $('#new-color').text(color);
-    $('#content').css('background', color);
+// $('#sel2').on('change', function () {
+//     let color = $(this).val();
+//     $('#div1').css('background', color);
+// });
+
+$('#sel2').select({
+    change: function () {
+                let color = $('#sel2').val();
+                console.log(color)
+                $('#div1').css('background', color);
+    }
 });
+
+
 
 let calcular = function (age) {
     return age * 3 * 365;

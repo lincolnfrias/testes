@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>datalib</title>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/datalib.min.js'></script>
+    <script src='js/vega.min.js'></script>
+    <script src='js/vega-lite.min.js'></script>
+    <script src='js/vega-embed.min.js'></script>
+    <script src='js/d3.min.js'></script>
+
+    </head>
+    <body>
+        
+        <p id='p1'></p>
+        <p id='p2'></p>
+
+        <br> 
+        <br>
+
+        <select id='input1'>
+            <option value="y2" selected="selected">2%</option>
+            <option value="y3">3%</option>
+            <option value="y4">4%</option>
+            <option value="y5">5%</option>
+        </select>
+        
+        <br> 
+        <br>
+
+        <div id="chart"></div>
+        <br>
+        <p id='p3'></p>
+
+        <script>
+           
+        // let data = dl.csv('data/juros.csv');    
+        // console.table(data);    
+        // $('#p1').text(data[0].x + ': ' + data[0].y2);
+        // $('#p2').text(data.columns);
+            
+
+        var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+            "width": 400, 
+            "data": {"url": "data/juros.csv"},
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "x", "type": "quantitative"},
+                "y": { "field": "y2", "type": "quantitative" },
+            },
+            "selection": {
+                "selector001": {
+                    "bind": "scales",
+                    "encodings": [
+                        "x",
+                        "y"
+                    ],
+                    "type": "interval"
+                }
+            }            
+        };
+        
+        
+        vegaEmbed("#chart", vlSpec, { actions: false,  defaultStyle: true });
+
+          $(function () {
+
+                vegaEmbed("#chart", vlSpec);
+
+                $('#input1').on('click', function () {
+                    let escolha = $('#input1').val()
+
+                    $('#p3').text(escolha);
+                    vlSpec.encoding.y.field = escolha.toString()
+
+                    vegaEmbed("#chart", vlSpec, { actions: false, defaultStyle: true } );
+
+                });
+
+            });
+
+        </script>
+
+    </body>
+</html>

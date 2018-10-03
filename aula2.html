@@ -4,7 +4,9 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/aula2.css'>
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <script src='js/jquery.min.js'></script>
+    <script src='js/jquery-ui.min.js'></script>
     <title>segundo</title>
 </head>
 <body>
@@ -68,7 +70,7 @@
     
     <form id='caixa1'>
         <input type='text'>
-        <button>enviar</button>
+        <button id='btn9'>enviar</button>
     </form>
     
     <p>O texto da caixa é <span id='sp6'>______</span>.</p>
@@ -80,7 +82,7 @@
         esses anos.</p>
     
         <form id='caixanumero1'>
-            <label> Número de anos: <input type='number' id='numero1'></label>
+            <label> Número de anos: <input id='numero1'></label>
             <button id='btn5'>calcular</button>
         </form>
     <p>O resultado final é <span id='sp7'>____</span>.</p>
@@ -97,7 +99,7 @@
         <option>lightsteelblue</option>
     </select>
     
-    <div id='content'>
+    <div id='div1'>
         <br>
         <p>A cor deste trecho vai mudar</p>
         <p>Ao contrário do seletor no alto da página e do que veremos em seguida, nesse caso o texto e o valor do seletor são iguais.</p>
@@ -147,8 +149,13 @@
     <h4>Range slides</h4>
 
     <p>Escolha um número:</p>
-    <input type='range' id='range1' min='0' max='100' step='10' value='50'>
+    <input type='range' id='range1' min='0' max='100' value='50'>
     <p>O resultado é <span id='sp11'>__</span>.</p>
+
+    <div id='range2'></div>
+
+    <p>O resultado é <span id='sp13'>__</span>.</p>
+
 
     <br>    
     <h4>Lidando com arrays (listas) e objetos (dicionários)</h4>
