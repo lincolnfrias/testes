@@ -2,7 +2,7 @@
 
 <br>
 
-O objetivo aqui é mostrar como construir páginas interativas, como [esta](lincolnfrias.github.io/webdesign/app2.html), em que os usuários podem controlar gráficos e cálculos.   
+O objetivo aqui é mostrar como construir páginas interativas, como [esta](https://lincolnfrias.github.io/webdesign/app2.html), em que os usuários podem controlar gráficos e cálculos.   
 
 Elas são chamadas de *apps*, aplicativos web, porque são mais dinâmicas do que as páginas comuns, estáticas.   
 
