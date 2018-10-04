@@ -31,7 +31,7 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 - aula2.html: criando a mesma página, mas com arquivos externos.
 - aula3.html: usando javascript para modificar html e css.
 - aula4.html: criando interatividade.
-- app1.html: criando um gráfico interativo
+- app1.html: estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
 - app2.html: criando a mesma página, mas com abas. 
 
 
