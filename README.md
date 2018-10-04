@@ -33,6 +33,7 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 - [aula4.html](https://lincolnfrias.github.io/webdesign/aula4.html): criando interatividade.
 - [app1.html](https://lincolnfrias.github.io/webdesign/app1.html): estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
 - [app2.html](https://lincolnfrias.github.io/webdesign/app2.html): criando a mesma página, mas com abas. 
+- como criar um site usando o GitHub Pages.
 
 <br>
 
