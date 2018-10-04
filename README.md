@@ -25,9 +25,14 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 
 ### Aulas
 
-1- primeiros passos, sem instalar nada (JSFiddle)
-2- no seu computador: instalando VSCode
-
+- primeiros passos, sem instalar nada (JSFiddle).
+- no seu computador: instalando VSCode.
+- aula1.html: criando uma página. 
+- aula2.html: criando a mesma página, mas com arquivos externos.
+- aula3.html: usando javascript para modificar html e css.
+- aula4.html: criando interatividade.
+- app1.html: criando um gráfico interativo
+- app2.html: criando a mesma página, mas com abas. 
 
 
 
