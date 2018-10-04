@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    </head>
+    <script src='js/jquery.min.js'></script>
+    <script src="js/simple-statistics.min.js"></script>
+    <script src="js/math.min.js"></script>
+    <script src="js/bignumber.min.js"></script>
+    <script src="js/theorem.min.js"></script>
+    <script src="https://cdn.rawgit.com/Gmousse/dataframe-js/master/dist/dataframe-min.js"></script>
+
+    <body>
+       <p>Os resultados foram <span id='sp1'>___</span> e <span id='sp2'>___</span>. E também <span id='sp3'>___</span>.</p>
+       <p>Para encadear operações e arredondar, use Math.js diz: <span id='sp4'>___</span>.</p>     
+
+       <script>
+           let a = ss.linearRegression([[0, 0], [1, 1]]); 
+           $('#sp1').text(a['m']);       
+
+           let b = math.chain(3.66789).round(2).add(5).multiply(20); 
+           $("#sp4").text(b); 
+
+
+           const t = new TheoremJS();
+           let c = t.average(10, 20, 15);
+           $('#sp2').text(b);       
+           
+           let d = t.correlation([3, 2, 4, 5, 6], [9, 7, 12, 15, 17]);  
+           b = Math.round(b * 1000)/1000;
+           $('#sp3').text(c);       
+           
+
+            let dados = [3, 4, 5];
+            let maximo = ss.max(dados);
+            d3.select('#p1').text(maximo);
+
+            var DataFrame = dfjs.DataFrame;
+            // const df = new DataFrame(data, columns);
+            let coisa
+
+            DataFrame.fromCSV(
+                "http://vincentarelbundock.github.io/Rdatasets/csv/COUNT/titanic.csv"
+            )
+                .then(df => df.show());
+                
+
+ 
+       </script>
+    </body>
+</html>

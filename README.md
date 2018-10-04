@@ -22,10 +22,35 @@ Portanto, se você tem prazer em programar, é muito mais divertido e poderoso a
 
 Por isso, vamos focar apenas no que é importante para fazer o tipo de página que nos interessa. Por exemplo, embora o pacote [D3](https://d3js.org/) seja o pacote em javascript capaz de produzir os gráficos mais impressionantes, ele é muito trabalhoso. Vamos preferir utilizar Vega-Lite, um pacote que torna muito mais simples produzir os gráficos de que precisamos. E melhor, podemos fazer gráficos Vega-Lite usando o python ou o R e incorporá-los diretamente em nossa página.
 
+
+### Aulas
+
+1- primeiros passos, sem instalar nada (JSFiddle)
+2- no seu computador: instalando VSCode
+
+
+
+
+Para instalar VSCode:
+
+No Linux:
+
+```
+sudo dpkg -i code???
+```
+
+
 Aqui está uma lista do que usaremos:
 
-- Visual Studio Code (VSCode): editor de texto que simplifica muito a escrita de html, css e javascript.
 - jquery: pacote que simplifica javascript.
 - jquery-ui: pacote para criar botões e seletores mais bonitos.
 - vega-lite e altair: pacotes para criar gráficos (o primeiro é um pacote javascript, o segundo é sua versão em python).  
 - datalib: pacote para carregar os dados em csv em nossa página.
+- Visual Studio Code (VSCode): editor de texto que simplifica muito a escrita de html, css e javascript.
+
+
+### Para aprender mais
+
+- Khan Academy
+- W3Schools
+- MDN

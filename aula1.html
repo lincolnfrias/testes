@@ -3,67 +3,45 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <script src='js/jquery.min.js'></script>
     <title></title>
-    </head>
-    <body>
+    <style>
+        #p1 {
+            background-color: lightgray;
+        }
 
-        <p>Qualquer coisa escrita em html.</p>
-        <p id='p1'></p>
-        <p id='p2'></p>
-        <p id='p3'></p>
-        <p id='p4'></p>
-        <p id='p5'>O resultado do balanço foi <span id='span1'></span> mil reais.</p>
-        <p id='p6'></p>
-        <div id='div1'></div>
-        <p id='p7'></p>
+        .coisa {
+            color: orange;
+        }
 
-        <script>
-            // inserindo texto com javascript
-            $('#p1').html('Esta frase é diferente, pois foi escrita com javascript.');
+        #div1 {
+            color: darkred;
+        }
 
-            // usando variáveis
-            let palavras = 'Esta frase foi criada ';
-            let maispalavras = 'a partir de variáveis';
-            frase = palavras + maispalavras;
-            $('#p2').html(frase + '.');
-            
-            // objetos possuem propriedades e métodos
-            comprimento = frase.length;
-            pedaco = frase.substring(0, 8);
-            $('#p3').html(`A frase anterior possui ${comprimento} caracteres. Começando com "${pedaco}".`);
+        code{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
 
-            // array em js: lista do python, vetor do R
-            let lista = ['joão', 'maria', 23];
-            $('#p4').html(`O segundo elemento da lista é ${lista[1]}.`); 
+    <h3>Um título qualquer </h3>
+    <br>
 
-            // calculando e usando span
-            let receitas = 150;
-            let despesas = 100;
-            resultado = receitas - despesas;
-            $('#span1').html(resultado);
+    <p id='p1' class='coisa'>Este é o parágrafo com id "p1" e class "coisa".</p>
+    <div id='div1'>
+        <p>Este é um parágrafo sem id e sem class, mas dentro de um div com css específica.</p>
+    </div>
 
-            // funções
-            function oi(id, amigo) {
-                $(id).html(`<br>Oi, ${amigo}!<br><br>`)
-            };
+    <p>Aqui está um parágrafo sem id e sem class, mas com um <span class='coisa'>span da class "coisa"</span>.</p>
 
-            oi('#p6', 'pessoal');
-            
-            // for loop, div e append
-            for (i=0; i<4; i++){
-                $('#div1').append(`<p> coisa ${i} </p>`)
-            };
+    <p>Uma novidade. Se estiver usando o Chrome, digite ctrl+shift+j e veja o resultado da operação abaixo em seu console.</p>
 
-            // if else
-            let a = 10;
-            let b = 20;
-            if (a < b){
-                $('#p7').html(`${a} é <b>menor</b> do que ${b}.`);
-            } else {
-                $('#p7').html(`${a} é <b>maior</b> do que ${b}.`);
-            };
+    <p>Ele é muito importante para o desenvolvimento web, pois é onde aparecerão as mensagens de erro.</p>
 
-        </script>
-    </body>
+    <p>Além disso, você pode executar comandos javascript diretamente nele, o que é muito útil para testar seus códigos. Experimente fazer alguma operação aritmética nele e criar alguma variável, por exemplo <code>let a = 23</code>.</p>
+
+    <script>
+        console.log(2 + 9);
+    </script>
+</body>
 </html>

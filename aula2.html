@@ -3,178 +3,27 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
     <link rel='stylesheet' href='css/aula2.css'>
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <script src='js/jquery.min.js'></script>
-    <script src='js/jquery-ui.min.js'></script>
-    <title>segundo</title>
 </head>
 <body>
-    <p>Javascript pode mudar html:</p>
 
-    <button id='btn1'>aperte este botão</button>
-    <p id='p1'>Este texto vai mudar.</p>
-    
-    <p>O seletor abaixo altera o valor mostrado no parágrafo seguinte:</p>
-
-    <select id='sel1'>
-            <option value='1'>escolha 1</option>
-            <option value='2' selected='selected'>escolha 2</option>
-            <option value='3'>escolha 3</option>
-    </select>
-
-    <p id='p2'>A opção selecionada foi ______, por isso, o valor é _____.</p>                
-        
-    <p>O número ao final desta frase foi é definido como uma variável e passa por diversas operações até chegar ao valor de <span id='sp1'></span>.</p>
-        
-    <p>Já o valor a seguir é calculado a partir de uma função: <span id='sp2'></span>.</p>
-    
-    <p>É possível se referir a diferentes elementos de um array (lista) e suas propriedades: <span id='sp3'></span>.</p>
-
-    <p> E também fazer testes booleanos. Por exemplo, o número 40 está no array? <span id='sp4'></span>.</p>
-
-    <h3>Interação: inputs e events</h3>
-
-    <p>Há vários tipos de eventos:</p>
-    <ul>
-        <li>change</li>
-        <li>mouse click</li>
-        <li>mouseover/out</li>
-        <li>mousedown/up</li>
-        <li>form submit</li>
-        <li>form focus/blur</li>
-        <li>keydown/press/up</li>
-        <li>window scroll</li>
-    </ul>
-
-    <p>Eles podem estar associados a diversos tipos de inputs ("html forms"). Acima vimos botão e select box. </p>
-    
-    <p>Para capturar eventos, é preciso incluir "event listeners", funções que registram quando um evento aconteceu e acionam uma nova função ("callback function").</p>
-
-    <br>
-    <h4>Botões</h4>
-
-    <button id='btn2'>Mostrar resposta</button>
-    <button id='btn3'>Verificar resposta</button> 
-    <p id='p3'><br></p>
+    <h3>Um título qualquer </h3>
     <br>
 
-    <button id='btn4'>Contagem</button>
-    <p>Resultado da contagem: <span id='sp5'></span>.</p>
-    
-    <br>
-    <h4>Caixas de texto</h4>
-
-    <p>Esta caixa de texto responde aos seguintes eventos: focus, blur e keypress.</p>
-    <p>Escreva alguma coisa e aperte enter (ou enviar): </p>
-    
-    <form id='caixa1'>
-        <input type='text'>
-        <button id='btn9'>enviar</button>
-    </form>
-    
-    <p>O texto da caixa é <span id='sp6'>______</span>.</p>
-        
-    <br>
-    <h4>Caixa de número, com cálculo</h4>
-    
-    <p>Alguma coisa acontece 3 vezes ao dia. Insira um número de anos para saber quantas vezes ela terá acontecido em todos
-        esses anos.</p>
-    
-        <form id='caixanumero1'>
-            <label> Número de anos: <input id='numero1'></label>
-            <button id='btn5'>calcular</button>
-        </form>
-    <p>O resultado final é <span id='sp7'>____</span>.</p>
-
-    <br>
-    <h4>Seletores</h4>
-
-    <p>Modificando a cor do fundo:</p>
-    
-    <select id='sel2'>
-        <option>papayawhip</option>
-        <option>palegoldenrod</option>
-        <option>lightcyan</option>
-        <option>lightsteelblue</option>
-    </select>
-    
+    <p id='p1' class='coisa'>Este é o parágrafo com id "p1" e class "coisa".</p>
     <div id='div1'>
-        <br>
-        <p>A cor deste trecho vai mudar</p>
-        <p>Ao contrário do seletor no alto da página e do que veremos em seguida, nesse caso o texto e o valor do seletor são iguais.</p>
-        <br>
-        <br>
+        <p>Este é um parágrafo sem id e sem class, mas dentro de um div com css específica.</p>
     </div>
-    <br>
 
-    <label>Escolha uma alternativa:</label>
-    <select id='sel3'>
-        <option value='a'>produto a</option>
-        <option value='b'>produto b</option>
-        <option value='c'>produto c</option>
-    </select>
-    
-    <p>Resposta <span id='sp8'>______</span>.</p>
-        
-    <br>
-    <h4>Radios e checkboxes</h4>
+    <p>Aqui está um parágrafo sem id e sem class, mas com um <span class='coisa'>span da class "coisa"</span>.</p>
 
-    <p>A lógica desses dois tipos de input é semelhante à dos seletores.</p>
+    <p>Uma novidade. Se estiver usando o Chrome, digite ctrl+shift+j e veja o resultado da operação abaixo em seu console.</p>
 
-    <p>Escolha uma das alternativas abaixo (basta clicar no texto):</p>
-    <form id='radio1'>
-        <label><input type='radio' name='um' value='1'>coisa 1</label><br> 
-        <label><input type='radio' name='um' value='2'>coisa 2</label><br>
-        <label><input type='radio' name='um' value='3'>coisa 3</label><br>
-        <br>
-        <button id='btn6'>enviar</button>
-    </form>
+    <p>Ele é muito importante para o desenvolvimento web, pois é onde aparecerão as mensagens de erro.</p>
 
-    <p>A opção escolhida foi <span id='sp9'>___</span>.</p>
+    <p>Além disso, você pode executar comandos javascript diretamente nele, o que é muito útil para testar seus códigos. Experimente fazer alguma operação aritmética nele e criar alguma variável, por exemplo <code>let a = 23</code>.</p>
 
-    <p>Marque alguma das opções abaixo:</p>
-    <form id='checkbox1'>
-        <label><input type='checkbox' name='dois' value='1000'>valor 1000</label><br>
-        <label><input type='checkbox' name='dois' value='2000'>valor 2000</label><br>
-        <label><input type='checkbox' name='dois' value='3000'>valor 3000</label><br>
-        <br>
-        <button id='btn7'>enviar</button>
-    </form>
-
-    <p>A opção escolhida foi <span id='sp10'>___</span>.</p>
-
-
-    <br>
-    <h4>Range slides</h4>
-
-    <p>Escolha um número:</p>
-    <input type='range' id='range1' min='0' max='100' value='50'>
-    <p>O resultado é <span id='sp11'>__</span>.</p>
-
-    <div id='range2'></div>
-
-    <p>O resultado é <span id='sp13'>__</span>.</p>
-
-
-    <br>    
-    <h4>Lidando com arrays (listas) e objetos (dicionários)</h4>
-
-    <p>Essa lista foi construída a partir de um js-array:</p>
-    <ul id='lista1'></ul>
-    
-    <p id='p22'>O texto abaixo foi criado a partir de um js-objeto.</p>
-
-    <br>
-    <h4>Carregando dados de arquivos externos</h4>
-                
-    <button id='btn8'>carrega arquivo (se usar servidor)</button>
-    <p>O texto do arquivo é: <span id='sp12'></span></p>
-    
-    <br>
-    <br>
-    <br>
-    
     <script src='js/aula2.js'></script>
 </body>
 </html>
