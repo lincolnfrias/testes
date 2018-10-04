@@ -27,22 +27,34 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 
 - primeiros passos, sem instalar nada (JSFiddle).
 - no seu computador: instalando VSCode.
-- aula1.html: criando uma página. 
-- aula2.html: criando a mesma página, mas com arquivos externos.
-- aula3.html: usando javascript para modificar html e css.
-- aula4.html: criando interatividade.
-- app1.html: estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
-- app2.html: criando a mesma página, mas com abas. 
+- [aula1.html](https://lincolnfrias.github.io/webdesign/aula1.html): criando uma página simples. 
+- [aula2.html](https://lincolnfrias.github.io/webdesign/aula2.html): criando a mesma página, mas com arquivos externos.
+- [aula3.html](https://lincolnfrias.github.io/webdesign/aula3.html): usando javascript para modificar html e css.
+- [aula4.html](https://lincolnfrias.github.io/webdesign/aula4.html): criando interatividade.
+- [app1.html](https://lincolnfrias.github.io/webdesign/app1.html): estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
+- [app2.html](https://lincolnfrias.github.io/webdesign/app2.html): criando a mesma página, mas com abas. 
 
+<br>
 
+---- 
+<br>
 
-Para instalar VSCode:
+[em elaboração]
 
-No Linux:
+Baixe o VSCode [aqui](https://code.visualstudio.com/). 
+Para instalar no Windows, basta executar o arquivo. 
+No Linux, execute o seguinte comando na pasta em que estiver o arquivo (substitua o nome do arquivo ):
 
 ```
-sudo dpkg -i code???
+sudo dpkg -i code_1.27.2-1536736588_amd64.deb
 ```
+
+### Ideias básicas sobre HTML
+
+### Ideias básicas sobre CSS
+
+### Ideias básicas sobre Javascript
+
 
 
 Aqui está uma lista do que usaremos:
