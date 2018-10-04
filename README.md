@@ -56,7 +56,20 @@ sudo dpkg -i code_1.27.2-1536736588_amd64.deb
 
 ### Ideias básicas sobre Javascript
 
+- declare variáveis com let ou const (var é a versão antiga).
+- use ; ao final de cada comando.
+- valores booleanos em letras minúsculas: true, false.
+- funções e estruturas de repetição são delimitadas por chaves, {}. 
+- a declaração da estrutura de repetição exige três elementos
 
+Estruturas de dados:
+
+| python     | R      | javascript |
+|:----------:|:------:|:----------:|
+|list        | vector | array      |
+| dictionary | -      | object     |
+
+### Outras observações
 
 Aqui está uma lista do que usaremos:
 
