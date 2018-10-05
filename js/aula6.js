@@ -1,6 +1,5 @@
 // ler csv
 let teste = dl.csv('dados/teste.csv');
-let stocks = dl.csv('dados/stocks.csv');
 
 // head(), mostrar os dados como tabela
 console.log(dl.format.table(teste, {limit: 2}));
@@ -61,27 +60,12 @@ console.log(`A correlação entre data e preço é ${math.round(correlacao, 2)}`
 // regressão linear
 console.log('saída da regressão', dl.linearRegression(teste, 'preco', 'id'));
 
+// números aleatórios
+// uniforme, integer, normal
+let r = dl.random.uniform(1, 10);
+console.log(r.sample(5)) // gera cinco números
+// r.pdf(), r.cdf(), r.icdf()
 
-
-
-
-let fields = [
-    "CMTE_ID",              // committee id
-    "CMTE_NM",              // committee name
-    "TRES_NM",              // treasurer name
-    "CMTE_ST1",             // street address line 1
-    "CMTE_ST2",             // street address line 2
-    "CMTE_CITY",            // city
-    "CMTE_ST",              // state
-    "CMTE_ZIP",             // zip code
-    "CMTE_DSGN",            // designation
-    "CMTE_TP",              // type
-    "CMTE_PTY_AFFILIATION", // party affiliation
-    "CMTE_FILING_FREQ",     // filing frequency
-    "ORG_TP",               // interest group category
-    "CONNECTED_ORG_NM",     // connected organization name (if any)
-    "CAND_ID"               // candidate id (if any)
-];
-
-let cm = dl.dsv('dados/cm.txt', { delimiter: '|', header: fields });
-
+// bootstrap
+let bs = dl.random.bootstrap(preco);
+console.log(bs.sample(5))
