@@ -74,4 +74,50 @@ $('#sel2').selectmenu({
 
 
 
+const cumprod = function(input){
+    output = [];
+    x = 1;
+    for (i = 0; i < input.length; i++) {
+        x = x * input[i];
+        output.push(x);
+    };
+    return output;
+}
 
+let tabuas = dl.csv('dados/tabuas-de-vida.csv');
+
+// let i = 0.03;
+// let idade = 36;
+// let b = 10000; 
+let qx = tabuas.map(dl.$('at_2000_male'));
+
+const sv_vit = function(i, idade, b, qx){
+    let n = dl.max(tabuas.map(dl.$('idade'))) - idade;
+    let px = math.subtract(1, qx);
+    let serie = math.range(1, n + 1);
+    let vp = math.dotPow((1/(i+1)), serie);
+    let vp2 = math.dotPow(math.dotPow((1 / (i + 1)), 2), serie);
+    let qxx = qx.slice(idade, idade + n);
+    let pxx = cumprod(px.slice(idade, idade + n - 1))
+    pxx.splice(0, 0, 1); // insere número 1 na posição 0
+    let Ax = b * math.sum(math.dotMultiply(math.dotMultiply(vp, pxx), qxx));
+    let Ax2 = b * math.sum(math.dotMultiply(math.dotMultiply(vp2, pxx), qxx));
+    let Var = (Ax2 - math.pow(Ax, 2)) * 10000;
+    let resultado = [math.round(Ax, 1), math.round(Ax2, 1), math.round(Var, 1)];
+    return resultado
+};
+
+const sv_temp = function (i, idade, n, b, qx) {
+    let px = math.subtract(1, qx);
+    let serie = math.range(1, n + 1);
+    let vp = math.dotPow((1 / (i + 1)), serie);
+    let vp2 = math.dotPow(math.dotPow((1 / (i + 1)), 2), serie);
+    let qxx = qx.slice(idade, idade + n);
+    let pxx = cumprod(px.slice(idade, idade + n - 1))
+    pxx.splice(0, 0, 1); // insere número 1 na posição 0
+    let Ax = b * math.sum(math.dotMultiply(math.dotMultiply(vp, pxx), qxx));
+    let Ax2 = b * math.sum(math.dotMultiply(math.dotMultiply(vp2, pxx), qxx));
+    let Var = (Ax2 - math.pow(Ax, 2)) * 10000;
+    let resultado = [math.round(Ax, 1), math.round(Ax2, 1), math.round(Var, 1)];
+    return resultado
+};
