@@ -34,6 +34,10 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 - [app1.html](https://lincolnfrias.github.io/webdesign/app1.html): estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
 - [app2.html](https://lincolnfrias.github.io/webdesign/app2.html): criando a mesma página, mas com abas. 
 - como criar um site usando o GitHub Pages.
+- [aula5.html](https://lincolnfrias.github.io/webdesign/aula5.html): operações matemáticas.
+- [aula6.html](https://lincolnfrias.github.io/webdesign/aula6.html): carregando csv e fazendo operações com dataframes (agrupar, filtrar, ordenar etc.).
+- [aula7.html](https://lincolnfrias.github.io/webdesign/aula7.html): criando tabela interativa.
+- [aula8.html](https://lincolnfrias.github.io/webdesign/aula8.html): tabela interativa a partir de arquivo externo.
 
 <br>
 

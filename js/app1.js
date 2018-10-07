@@ -73,5 +73,5 @@ $('#sel2').selectmenu({
 }});
 
 
-// console.log(vlSpec['data'])
-// console.log(dados[0])
+
+

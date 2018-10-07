@@ -6,7 +6,7 @@ console.log(dl.format.table(teste, {limit: 2}));
 
 // mostrar colunas
 let colunas = teste.columns.toString()
-$('#um').html(`As colunas do conjunto de dados são ${colunas}.`);
+$('#p1').html(`As colunas do conjunto de dados são ${colunas}.`);
 
 // .toString() é necessário para um valor poder ser mostrado na página,
 // ao invés de ser apenas utilizado em cálculos.
@@ -39,7 +39,6 @@ console.log('valores ordenados', teste.sort(dl.comparator('-preco')))
 // filtrar dados, query
 console.log('valores filtrados', teste.filter(function (d) { return d.preco > 100 }));
 
-
 // amplitude
 let amplitude = dl.extent(teste, 'preco');
 console.log(`A amplitude do preço é ${amplitude}.`);
@@ -63,9 +62,16 @@ console.log('saída da regressão', dl.linearRegression(teste, 'preco', 'id'));
 // números aleatórios
 // uniforme, integer, normal
 let r = dl.random.uniform(1, 10);
-console.log(r.sample(5)) // gera cinco números
+console.log('cinco números da uniforme', r.samples(5)); // gera cinco números
 // r.pdf(), r.cdf(), r.icdf()
 
 // bootstrap
 let bs = dl.random.bootstrap(preco);
-console.log(bs.sample(5))
+console.log('bootstrap do preço', bs.samples(5));
+
+
+// pacote simple-statistics
+// possui muitas funções
+console.log('amostragem com reposição', ss.sampleWithReplacement([3, 4, 5], 20)) 
+// console.log('binomial', ss.binomialDistribution(4, .5))
+// medianAbsoluteDeviation, poisson, chiSquare, tTest, permutationTest, equalIntervalBreaks
