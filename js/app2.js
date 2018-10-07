@@ -1,5 +1,6 @@
 $('#sel1', '#sel2', '#sel3').selectmenu();
-
+$('#numero1').spinner();
+$('#btn1').button();
 
 const cumprod = function (input) {
     output = [];
@@ -59,19 +60,33 @@ $('#sp1').html(resultado1[0])
 $('#sel1').selectmenu({
     change: function () {
         let escolha2 = $('#sel1').val();
-        let resultado2 = sv_vit(i=parseFloat(escolha2));
+        let resultado2 = sv_vit(i=parseFloat(escolha2),
+                                idade=$('#range1').slider('values', 0),
+                                b=$('#numero1').val());
         $('#sp1').html(resultado2[0])
         console.log(resultado2[0])
     }
 });
 
 $("#range1").slider({
-    value: 50,
+    value: 36,
+    min: 30,
+    max: 100,
     slide: function (event, ui) {
-        $('#sp1').html($('#range1').slider('values', 0));
+        let escolha3 = $('#range1').slider('values', 0);
+        $('#sp2').html(escolha3);
+        let resultado3 = sv_vit(0.03, idade=parseInt(escolha3))
+        $('#sp1').html(resultado3[0]);
     }
 });
 
+$('#caixanumero1').on('submit', function (event) {
+    let valor = $('#numero1').val();
+    console.log(valor);
+    resultado4 = sv_vit(0.03, 36, b=parseInt(valor))
+    $('#sp1').html(resultado4[0]);
+    event.preventDefault();
+});
 
 
 
@@ -106,7 +121,7 @@ vegaEmbed('#chart', vlSpec, {actions: false});
 $('#sel2').selectmenu({
     change: function () {
                 let escolha = $('#sel2').val()
-                $('#sp2').html(escolha);
+                $('#sp3').html(escolha);
                 vlSpec.encoding.y.field = escolha.toString()
                 vegaEmbed('#chart', vlSpec, {actions: false});
             }

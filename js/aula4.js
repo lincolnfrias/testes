@@ -1,12 +1,6 @@
 $('#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9').button();
 $('#sel1, #sel2, #sel3').selectmenu();
 $("#numero1").spinner();
-$("#range2").slider({
-    value: 50, 
-    slide: function(event, ui) {
-        $('#sp13').html($('#range2').slider('values', 0));        
-    }
-});
 
 $('#btn1').on('click', function(){
     $('#p1').html('Aqui está um texto diferente.');
@@ -70,7 +64,7 @@ $('#caixa1').on('submit', function (event) {
 //     $('#div1').css('background', color);
 // });
 
-$('#sel2').select({
+$('#sel2').selectmenu({
     change: function () {
                 let color = $('#sel2').val();
                 console.log(color)
@@ -90,16 +84,17 @@ $('#caixanumero1').on('submit', function (event) {
     event.preventDefault();
 });
 
-$('#sel3').on('change', function (event) {
-    let resposta = $(this).val();
-    $('#sp8').removeClass();
-    if (resposta === 'a') {
-        $('#sp8').text('correta').addClass('correta');
-    } else {
-        $('#sp8').text('errada').addClass('errada');
-    }
-    event.preventDefault();
-});
+$('#sel3').selectmenu({
+    change: function (event) {
+                let resposta = $('#sel3').val();
+                $('#sp8').removeClass();
+                if (resposta === 'a') {
+                    $('#sp8').text('correta').addClass('correta');
+                } else {
+                    $('#sp8').text('errada').addClass('errada');
+                }
+                event.preventDefault();
+}});
 
 $('#radio1').on('submit', function(event) {
     let resultado = $('input[name="um"]:checked').val()
@@ -118,6 +113,14 @@ $('#range1').on('change', function (event) {
     event.preventDefault();
     $('#sp11').html($(this).val());
 });
+
+$("#range2").slider({
+    value: 50,
+    slide: function (event, ui) {
+        $('#sp13').html($('#range2').slider('values', 0));
+    }
+});
+
 
 // cria html a partir de lista js     
 let produtos = ['café', 'milho', 'soja']

@@ -2,6 +2,7 @@
 <head>
   <title>Primeiro app</title>
   <meta charset="utf-8">
+  <link rel='stylesheet' href='css/app2.css'>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <script src='js/jquery.min.js'></script>
   <script src='js/jquery-ui.min.js'></script>
@@ -16,12 +17,6 @@
       $("#tabs").tabs();
     });
   </script>
-
-  <style>
-  #chart, #chart2 {
-    margin-left: 40%;
-  }
-  </style>
 </head>
 
 
@@ -29,11 +24,40 @@
 
   <div id='tabs'>
     <ul>
-      <li><a href="#tabs-1">Juros</a></li>
-      <li><a href="#tabs-2">Qualquer coisa</a></li>
+      <li><a href="#tabs-1">Seguro de vida</a></li>
+      <li><a href="#tabs-2">Juros</a></li>
+      <li><a href="#tabs-3">Qualquer coisa</a></li>
     </ul>
 
-    <div id="tabs-1">
+    <div id='tabs-1'>
+      <h3>Calcule seu seguro de vida</h3>
+      <br>
+      <img src='outros/thumbs-up.gif' alt='thumbs-up' height=100>
+
+    <p>Escolha a taxa de juros:</p>  
+    <div id='inputs'>
+      <select id='sel1'>
+        <option value='0.03' selected='selected'>3%</option>
+        <option value='0.04'>4%</option>
+        <option value='0.05'>5%</option>
+      </select>
+    </div>
+    <br>
+    <p>Escolha a idade: <span id='sp2'>36</span>.</p>
+    <div id='range1'></div>
+    <br>
+    <form id='caixanumero1'>
+      <label> Valor do benefício: <input id='numero1' value='10000'></label>
+      <button id='btn1'>calcular</button>
+    </form>
+    <br>
+    <br>
+    <p>Seu prêmio será de <span id='sp1'>_____</span>.</p>
+
+
+
+    </div> 
+    <div id="tabs-2">
 
       <h3>Nosso primeiro app</h3>
 
@@ -41,8 +65,8 @@
       <p>Use o menu para selecionar a taxa de juros que será representada no gráfico. Use o mouse para dar zoom.</p>
       <p>O primeiro parágrafo também será atualizado.</p>
       <br>
-      <div id='inputs'>
-            <select id='sel1'>
+      <div id='inputs2'>
+            <select id='sel2'>
               <option value="y2" selected="selected">2%</option>
               <option value="y3">3%</option>
               <option value="y4">4%</option>
@@ -51,10 +75,10 @@
       </div>
 
       <div id="chart"></div>
-      <p>Coluna escolhida: <span id='sp1'>__</span>.</p>
+      <p>Coluna escolhida: <span id='sp3'>__</span>.</p>
     </div>
 
-    <div id="tabs-2">
+    <div id="tabs-3">
 
       <div id='texto'>
         <br>
@@ -72,7 +96,7 @@
       <br>
       
       <div class=inputs>
-          <select id='sel2'>
+          <select id='sel3'>
             <option value="b">Coluna B</option>
             <option value="c">Coluna C</option>
           </select>
@@ -96,6 +120,6 @@
     <br>
     <br>
 
-  <script src='js/app1.js'></script>
+  <script src='js/app2.js'></script>
 </body>
 </html>
