@@ -1,86 +1,90 @@
 <!DOCTYPE html>
+
 <head>
   <title>Primeiro app</title>
   <meta charset="utf-8">
-  <link rel='stylesheet' href='css/app.css'>
+  <link rel='stylesheet' href='css/app2.css'>
   <link rel="stylesheet" href="css/jquery-ui.css">
   <script src='js/jquery.min.js'></script>
   <script src='js/jquery-ui.min.js'></script>
   <script src="js/vega.min.js"></script>
   <script src="js/vega-lite.min.js"></script>
   <script src="js/vega-embed.min.js"></script>
+  <script src="js/datalib.min.js"></script>
+  <script src="js/math.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 
+
 <body>
-  <h3>Nosso primeiro app</h3>
 
-  <br>
-  <p>Use o menu para selecionar a taxa de juros que será representada no gráfico. Use o mouse para dar zoom.</p>
-  <p>O primeiro parágrafo também será atualizado.</p>
-  <br>
-  <div id='inputs'>
+      <h3>Calcule seu seguro de vida</h3>
+      <br>
+      <img src='outros/thumbs-up.gif' alt='thumbs-up' height=100>
+
+      <p>Escolha a taxa de juros:</p>
+      <div id='inputs'>
         <select id='sel1'>
-          <option value="y2" selected="selected">2%</option>
-          <option value="y3">3%</option>
-          <option value="y4">4%</option>
-          <option value="y5">5%</option>
+          <option value='0.03' selected='selected'>3%</option>
+          <option value='0.04'>4%</option>
+          <option value='0.05'>5%</option>
         </select>
-  </div>
+      </div>
+      <br>
+      <p>Escolha a idade: <span id='sp2'>36</span>.</p>
+      <div id='range1'></div>
+      <br>
+      <form id='caixanumero1'>
+        <label> Valor do benefício: <input id='numero1' value='10000'></label>
+        <button id='btn1'>calcular</button>
+      </form>
+      <br>
+      <br>
+      <p>Seu prêmio será de <span id='sp1'>_____</span>.</p>
 
-  <div id="chart"></div>
+      <div id="chart"></div>
+      <p>Coluna escolhida: <span id='sp3'>__</span>.</p>
+      <br>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div id='texto'>
-    <p>Coluna escolhida: <span id='sp1'>__</span>.</p>
-    <br>
+      <div id='texto'>
+        <br>
         <p>
           É possível escrever fórmulas inline, \( \alpha = 0 \), ou separadas:
-                  
+
           $$ y = \beta_0 + \beta_1 x_1 + \beta_2x_2 + \epsilon. $$
           <!-- \[y = \beta_0 + \beta_1 x_1 + \beta_2x_2 + \epsilon. \] -->
         </p>
         <p>Um exemplo inline mais complexo: \( \sum_{i=1} x² \).</p>
-  </div>
+      </div>
 
-  <p>Veja abaixo um outro gráfico, construído com dados que estão no próprio script, não em um csv.</p>
+      <p>Veja abaixo um outro gráfico, construído com dados que estão no próprio script, não em um csv.</p>
+
+      <br>
+
+      <div class=inputs>
+        <select id='sel3'>
+          <option value="b">Coluna B</option>
+          <option value="c">Coluna C</option>
+        </select>
+      </div>
+
+      <div id='chart2'></div>
+
 
   <br>
-  
-  <div class=inputs>
-      <select id='sel2'>
-        <option value="b">Coluna B</option>
-        <option value="c">Coluna C</option>
-      </select>
-  </div>  
-
-  <div id='chart2'></div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
   <script src='js/app1.js'></script>
 </body>
+
 </html>

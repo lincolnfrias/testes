@@ -1,5 +1,6 @@
 $('#sel1', '#sel2', '#sel3').selectmenu();
-
+$('#numero1').spinner();
+$('#btn1').button();
 
 const cumprod = function (input) {
     output = [];
@@ -19,7 +20,7 @@ let tabuas = dl.csv('dados/tabuas-de-vida.csv');
 // let qx = tabuas.map(dl.$('at_2000_male'));
 // let qx = tabuas.map(dl.$('at_2000_male'));
 
-const sv_vit = function (i=0.03, idade=36, b=10000, qx=tabuas.map(dl.$('at_2000_male'))) {
+const sv_vit = function (i = 0.03, idade = 36, b = 10000, qx = tabuas.map(dl.$('at_2000_male'))) {
     let n = dl.max(tabuas.map(dl.$('idade'))) - idade;
     let px = math.subtract(1, qx);
     let serie = math.range(1, n + 1);
@@ -35,7 +36,7 @@ const sv_vit = function (i=0.03, idade=36, b=10000, qx=tabuas.map(dl.$('at_2000_
     return resultado
 };
 
-const sv_temp = function (i=0.03, idade=36, n=50, b=10000, qx=tabuas.map(dl.$('at_2000_male'))) {
+const sv_temp = function (i = 0.03, idade = 36, n = 50, b = 10000, qx = tabuas.map(dl.$('at_2000_male'))) {
     let px = math.subtract(1, qx);
     let serie = math.range(1, n + 1);
     let vp = math.dotPow((1 / (i + 1)), serie);
@@ -55,28 +56,40 @@ let resultado1 = sv_vit(i = parseFloat(escolha1));
 $('#sp1').html(resultado1[0])
 
 
-
 $('#sel1').selectmenu({
     change: function () {
         let escolha2 = $('#sel1').val();
-        let resultado2 = sv_vit(i=parseFloat(escolha2));
+        let resultado2 = sv_vit(i = parseFloat(escolha2),
+            idade = $('#range1').slider('values', 0),
+            b = $('#numero1').val());
         $('#sp1').html(resultado2[0])
-        console.log(resultado2[0])
+        let colunaEscolhida = $('#sel1').val()
+        colunaEscolhida = 'y' + colunaEscolhida[3]
+        $('#sp3').html(colunaEscolhida);
+        vlSpec.encoding.y.field = colunaEscolhida.toString()
+        vegaEmbed('#chart', vlSpec, { actions: false });
     }
 });
 
 $("#range1").slider({
-    value: 50,
+    value: 36,
+    min: 30,
+    max: 100,
     slide: function (event, ui) {
-        $('#sp1').html($('#range1').slider('values', 0));
+        let escolha3 = $('#range1').slider('values', 0);
+        $('#sp2').html(escolha3);
+        let resultado3 = sv_vit(0.03, idade = parseInt(escolha3))
+        $('#sp1').html(resultado3[0]);
     }
 });
 
-
-
-
-
-
+$('#caixanumero1').on('submit', function (event) {
+    let valor = $('#numero1').val();
+    console.log(valor);
+    resultado4 = sv_vit(0.03, 36, b = parseInt(valor))
+    $('#sp1').html(resultado4[0]);
+    event.preventDefault();
+});
 
 
 let vlSpec = {
@@ -101,18 +114,7 @@ let vlSpec = {
 };
 
 
-vegaEmbed('#chart', vlSpec, {actions: false});
-
-$('#sel2').selectmenu({
-    change: function () {
-                let escolha = $('#sel2').val()
-                $('#sp2').html(escolha);
-                vlSpec.encoding.y.field = escolha.toString()
-                vegaEmbed('#chart', vlSpec, {actions: false});
-            }
-});
-
-
+vegaEmbed('#chart', vlSpec, { actions: false });
 
 
 
@@ -140,14 +142,15 @@ let vlSpec2 = {
 };
 
 
-vegaEmbed('#chart2', vlSpec2, {actions: false});
+vegaEmbed('#chart2', vlSpec2, { actions: false });
 
 $('#sel3').selectmenu({
     change: function () {
-    let escolha = $('#sel3').val()
-    vlSpec2.encoding.x.field = escolha.toString()
-    vegaEmbed('#chart2', vlSpec2, {actions: false});
-}});
+        let escolha = $('#sel3').val()
+        vlSpec2.encoding.x.field = escolha.toString()
+        vegaEmbed('#chart2', vlSpec2, { actions: false });
+    }
+});
 
 
 
