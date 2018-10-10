@@ -55,11 +55,12 @@ sudo dpkg -i code_1.27.2-1536736588_amd64.deb
 ```
 
 ### Ideias básicas sobre HTML
-
+- ctrl+u
+- ctrl+i
 ### Ideias básicas sobre CSS
 
 ### Ideias básicas sobre Javascript
-
+- ctrl+shift+j
 - declare variáveis com let ou const (var é a versão antiga).
 - use ; ao final de cada comando.
 - valores booleanos em letras minúsculas: true, false.
