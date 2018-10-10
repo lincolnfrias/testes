@@ -86,6 +86,6 @@ Aqui está uma lista do que usaremos:
 
 ### Para aprender mais
 
-- Khan Academy
-- W3Schools
-- MDN
+- [Khan Academy, programação](https://www.khanacademy.org/computing/computer-programming)
+- W3Schools: [html](https://www.w3schools.com/html), [css](https://www.w3schools.com/css), [javascript](https://www.w3schools.com/js) e [jquery](https://www.w3schools.com/jquery)
+- [MDN](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web): página da Mozilla que funciona como a documentação oficial de Javascript, com tradução em português e há seções sobre html, css e javascript.
