@@ -25,12 +25,15 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 
 ### Aulas
 
-- primeiros passos, sem instalar nada (JSFiddle).
-- no seu computador: instalando VSCode.
+- primeiros passos, sem instalar nada ([JSFiddle](http://jsfiddle.net)).
+- no seu computador: instalando [VSCode](#vscode).
 - [aula1.html](https://lincolnfrias.github.io/webdesign/aula1.html): criando uma página simples. 
 - [aula2.html](https://lincolnfrias.github.io/webdesign/aula2.html): criando a mesma página, mas com arquivos externos.
 - [aula3.html](https://lincolnfrias.github.io/webdesign/aula3.html): usando javascript para modificar html e css.
-- [aula4.html](https://lincolnfrias.github.io/webdesign/aula4.html): criando interatividade.
+- [aula4.html](https://lincolnfrias.github.io/webdesign/aula4.html): criando interatividade.   
+
+**Atençao**: daqui em diante, os arquivos exigem que se crie um servidor local (para carregar o csv). Se você tem a Anaconda instalada, basta executar no terminal <code>python -m http.server</code>.   
+
 - [app1.html](https://lincolnfrias.github.io/webdesign/app1.html): estabelecendo um servidor local, criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.
 - [app2.html](https://lincolnfrias.github.io/webdesign/app2.html): criando a mesma página, mas com abas. 
 - como criar um site usando o GitHub Pages.
@@ -45,6 +48,8 @@ Por isso, vamos focar apenas no que é importante para fazer o tipo de página q
 <br>
 
 [em elaboração]
+
+### VSCode <a name='vscode'></a>
 
 Baixe o VSCode [aqui](https://code.visualstudio.com/). 
 Para instalar no Windows, basta executar o arquivo. 
