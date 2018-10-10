@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/main.css'>
+    <title>análise de dados</title>
+</head>
+<body>
+
+    <h3>Webdesign para analistas de dados</h3>
+    <br>
+    <p>O objetivo aqui é mostrar como construir páginas interativas, como <a href='https://lincolnfrias.github.io/webdesign/app2.html' target='_blank'>esta</a>, em que os usuários podem controlar gráficos e cálculos.</p>
+
+    <p>Elas são chamadas de <em>apps</em>, aplicativos web, porque são mais dinâmicas do que as páginas comuns, estáticas.</p>
+    <p>Para construir esses apps é necessário usar as três linguagens básicas da internet: html (a estrutura da página), css
+    (cores, formatação etc.) e javascript (a interação propriamente dita).</p>
+    <p>Existem pacotes para construí-los diretamente em python (<a href='https://plot.ly/products/dash/' target='_blank'>Dash</a>) ou em R
+    (<a href='http://www.shinyapps.io' target='_blank'>Shiny</a>). Eles criam html, css e javascript automaticamente, a partir de comandos dessas outras linguagens.</p>
+           
+    <p>No entanto, eles têm dois grandes problemas:</p>
+
+    <ul>
+        <li>são limitadores: muitas vezes é difícil modificar coisas simples como espaçamento, cor, acrescentar texto em um
+        determinado lugar etc.</li>
+        <li>é difícil colocá-los na web, pois exigem um servidor python (ou R): é muito fácil construir o aplicativo no seu
+        computador, mas bastante complicado disponibilizá-los para outras pessoas.</li>
+    </ul>
+
+    <p>Esses dois problemas somem se você construir seu app usando diretamente html, css e javascript. Você poderá controlar
+    cada detalhe da página e não precisará de um servidor, porque o navegador de quem abrir seu aplicativo possui um
+    interpretador de javascript, inclusive nos celulares.</p>
+
+    <p>Portanto, se você tem prazer em programar, é muito mais divertido e poderoso aprender a controlar essas linguagens
+    diretamente. O que precisamos saber sobre html e css é muito simples, pois são apenas marcações, você aprenderá em uma
+    tarde. Javascript, no entanto, é mais complicada.</p>
+
+     <p>Por isso, vamos focar apenas no que é importante para fazer o tipo de página que nos interessa. Por exemplo, embora o
+    pacote  <a href='https://d3js.org/' target='_blank'>D3</a> seja o pacote em javascript capaz de produzir os gráficos mais impressionantes, ele é
+    muito trabalhoso. Vamos preferir utilizar Vega-Lite, um pacote que torna muito mais simples produzir os gráficos de que
+    precisamos. E melhor, podemos fazer gráficos Vega-Lite usando o python ou o R e incorporá-los diretamente em nossa
+    página.</p> 
+    
+    <h3>Aulas</h3>
+
+    <ul>
+        <li>primeiros passos, sem instalar nada (JSFiddle).</li>
+        <li>no seu computador: instalando VSCode.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula1.html">aula1.html</a>: criando uma página simples.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula2.html">aula2.html</a>: criando a mesma página, mas com
+            arquivos externos.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula3.html">aula3.html</a>: usando javascript para modificar
+            html e css.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula4.html">aula4.html</a>: criando interatividade.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/app1.html">app1.html</a>: estabelecendo um servidor local,
+            criando um gráfico interativo, carregando dados em csv e incluindo símbolos matemáticos em uma página.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/app2.html">app2.html</a>: criando a mesma página, mas com
+            abas.</li>
+        <li>como criar um site usando o GitHub Pages.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula5.html">aula5.html</a>: operações matemáticas.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula6.html">aula6.html</a>: carregando csv e fazendo
+            operações com dataframes (agrupar, filtrar, ordenar etc.).</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula7.html">aula7.html</a>: criando tabela interativa.</li>
+        <li><a href="https://lincolnfrias.github.io/webdesign/aula8.html">aula8.html</a>: tabela interativa a partir de
+            arquivo externo.</li>
+    </ul>
+    
+    <br>
+    <hr>
+    <br>
+    
+    <h2>[em elaboração]</h2>
+    
+    <p>Baixe o VSCode <a href="https://code.visualstudio.com/">aqui</a>. Para instalar no Windows, basta executar o arquivo. No Linux, execute o seguinte comando na pasta em que estiver o arquivo (substitua o nome do arquivo ):</p>
+    
+    <pre><code>
+        sudo dpkg -i code_1.27.2-1536736588_amd64.deb
+    </code></pre>
+    
+    <h3>Ideias básicas sobre HTML</h3>
+    <p>[em elaboração]</p>
+
+    <ul>
+        <li>ctrl+u</li>
+        <li>ctrl+i</li>
+    </ul>
+
+    <h3>Ideias básicas sobre CSS</h3>
+    <p>[em elaboração]</p>
+
+    
+    <h3>Ideias básicas sobre Javascript</h3>
+    <p>[em elaboração]</p>
+
+    <ul>
+        <li>ctrl+shift+j</li>
+        <li>declare variáveis com let ou const (var é a versão antiga).</li>
+        <li>use ; ao final de cada comando.</li>
+        <li>valores booleanos em letras minúsculas: true, false.</li>
+        <li>funções e estruturas de repetição são delimitadas por chaves, {}.</li>
+        <li>a declaração da estrutura de repetição exige três elementos</li>
+        <li>as listas do python são chamadas de arrays em javascript.</li>
+        <li>e os dicionários do python são chamados de objetos.</li>
+    </ul>
+    
+
+    <h3 id="outras-observações">Outras observações</h3>
+    
+    <p>Aqui está uma lista do que usaremos:</p>
+    
+    <ul>
+        <li>jquery: pacote que simplifica javascript.</li>
+        <li>jquery-ui: pacote para criar botões e seletores mais bonitos.</li>
+        <li>vega-lite e altair: pacotes para criar gráficos (o primeiro é um pacote javascript, o segundo é sua versão em
+            python).</li>
+        <li>datalib: pacote para carregar os dados em csv em nossa página.</li>
+        <li>Visual Studio Code (VSCode): editor de texto que simplifica muito a escrita de html, css e javascript.</li>
+    </ul>
+    
+    <h3>Para aprender mais</h3>
+    
+    <ul>
+        <li><a href="https://www.khanacademy.org/computing/computer-programming">Khan Academy, programação</a></li>
+        <li>W3Schools: <a href="https://www.w3schools.com/html">html</a>, <a href="https://www.w3schools.com/css">css</a>,
+            <a href="https://www.w3schools.com/js">javascript</a> e <a href="https://www.w3schools.com/jquery">jquery</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">MDN</a>: página da Mozilla que funciona como a documentação oficial da javascript, com tradução em português e há seções sobre html, css e javascript.</li>
+    </ul>
+
+        
+
+
+</body>
+</html>
